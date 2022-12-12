@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>PredictorFinc.</title>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/footer-distributed-with-address-and-phones.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top" >
+    <div class="w3-bar w3-white w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black"
+           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-black" href="index.html">Home</a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-green" href="predict.php">Stock
+            predictor</a>
+    </div>
+
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-white w3-center" style="padding:50px 16px">
+    <h1 class="w3-margin w3-jumbo">Stock Forecaster</h1>
+    <a href="#analytics-header"><button class="w3-button w3-PblackicatorFinc. w3-padding-large w3-large w3-margin-top w3-hover-black">Get Started</button></a>
+</header>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" id="analytics-header">
+    <div id="analytics-platform"></div>
+    <script src="https://s3.tradingview.com/tv.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new TradingView.widget(
+            {
+                "container_id": "analytics-platform",
+                "width": 1300,
+                "height": 610,
+                "symbol": "NASDAQ:TSLA",
+                "interval": "D",
+                "timezone": "exchange",
+                "theme": "",
+                "style": "",
+                "toolbar_bg": "",
+                "withdateranges": true,
+                "allow_symbol_change": false,
+                "save_image": false,
+                "details": true,
+                "hotlist": true,
+                "calendar": true,
+                "news": [
+                    "headlines"
+                ],
+                "locale": "en"
+            }
+        );
+    </script>
+</div>
+<!-- TradingView Widget END -->
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+
+        <div class="w3-onethird">
+            <h1>Who are the audiences?</h1>
+            <ol><li><h5>Marketers</h5></li>
+            <li><h5>Investors</h5></li>
+            <li><h5>Retail Traders</h5></li>
+            <li><h5>Self Investors</h5></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Stock <span>Forecastor</span></h3>
+    </div>
+    <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:200524811">200524811@student.georgianc.on.ca</a></p>
+        <p><a href="mailto:200524811">200528076@student.georgianc.on.ca</a></p>
+    </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Prepared by:</span><br>
+            <ol>
+                <li>
+                    Nikhil Sharma
+                </li>
+                <li>
+                    Romil Patel
+                </li>
+                <li>
+                    Tushar Kaushik
+                </li>
+            </ol>
+        </p>
+        
+    </div>
+</footer>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        let x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+</body>
+</html>
